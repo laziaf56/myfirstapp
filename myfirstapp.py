@@ -1,50 +1,13 @@
 import streamlit as st
-
-
-
-
-
-
-
-
-
 import numpy as np
-
-
 import pandas as pd
-
-
 import time
-
-
-
-
-
-
 
 st.header("My first Python Web App")
 
-
-
-
-
-
-
 readme = st.checkbox("readme first")
 
-
-
-
-
-
-
 if readme:
-
-
-
-
-
-
 
    st.write("""
 
@@ -55,25 +18,9 @@ if readme:
        """)
 
 
-
-
-
-
-
    st.write ("For more info, please contact:")
 
-
-
-
-
-
-
    st.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Poh Yu </a>", unsafe_allow_html=True)
-
-
-
-
-
 
 
 option = st.sidebar.selectbox(
@@ -83,15 +30,6 @@ option = st.sidebar.selectbox(
 
 
     ['line chart','map','T n C','Long Process'])
-
-
-
-
-
-
-
-
-
 
 
 
@@ -109,14 +47,7 @@ if option=='line chart':
 
 
 
-
-
-
    st.line_chart(chart_data)
-
-
-
-
 
 
 
@@ -132,25 +63,10 @@ elif option=='map':
    columns=['lat', 'lon'])
 
 
-
-
-
-
-
    st.map(map_data)
 
 
-
-
-
-
-
 elif option=='T n C':
-
-
-
-
-
 
 
    st.write('Before you continue, please read the [terms and conditions](https://www.gnu.org/licenses/gpl-3.0.en.html)')
@@ -176,26 +92,11 @@ elif option=='T n C':
 
 
 
-
-
-
-
-
-
-
-
 else:
 
 
    'Starting a long computation...'
 
-
-
-
-
-
-
-  
 
 
    latest_iteration = st.empty()
@@ -204,15 +105,8 @@ else:
    bar = st.progress(0)
 
 
-
-
-
-
-
    for i in range(100):
 
-
- 
 
 
        latest_iteration.text(f'Iteration {i+1}')
@@ -222,11 +116,5 @@ else:
 
 
        time.sleep(0.1)
-
-
-
-
-
-
 
    '...and now we\'re done!'
