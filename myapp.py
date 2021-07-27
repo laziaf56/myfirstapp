@@ -1,13 +1,15 @@
+import yfinance as yf
 import streamlit as st
+
 import numpy as np
 import pandas as pd
 
-st.header("My Second Streamlit App")
 
 st.write("""
 # Simple Stock Price App
 
 Shown are the stock closing price and volume of Google!
+
 """)
 
 
