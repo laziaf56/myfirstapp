@@ -8,7 +8,7 @@ Shown are the stock closing price and volume!
 """)
 
 option = st.sidebar.selectbox(
-    'Please select',
+    'Select the Stock Market',
      ['Google','Microsoft','Apple'])
 
 if option=='Google':
