@@ -9,7 +9,7 @@ Shown are the stock closing price and volume!
 
 option = st.sidebar.selectbox(
     'Select a mini project',
-     ['Google','MSFT','AAPL'])
+     ['Google','Mocrosoft','AAPL'])
 
 if option=='Google':
     tickerSymbol = 'GOOGL'
@@ -18,3 +18,20 @@ if option=='Google':
 
     st.line_chart(tickerDf.Close)
     st.line_chart(tickerDf.Volume)
+    
+if option=='Mocrosoft':
+    tickerSymbol = 'MSFT'
+    tickerData = yf.Ticker(tickerSymbol)
+    tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
+
+    st.line_chart(tickerDf.Close)
+    st.line_chart(tickerDf.Volume)
+
+if option=='Apple':
+    tickerSymbol = 'AAPL'
+    tickerData = yf.Ticker(tickerSymbol)
+    tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
+
+    st.line_chart(tickerDf.Close)
+    st.line_chart(tickerDf.Volume)
+        
