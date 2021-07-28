@@ -8,7 +8,7 @@ Shown are the stock closing price and volume!
 """)
 
 option = st.sidebar.selectbox(
-    'Select a mini project',
+    'Please select',
      ['Google','Mocrosoft','Apple'])
 
 if option=='Google':
@@ -16,7 +16,9 @@ if option=='Google':
     tickerData = yf.Ticker(tickerSymbol)
     tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
 
+    st.write("""## Closing Price""")
     st.line_chart(tickerDf.Close)
+    st.write("""## Volume Price""")
     st.line_chart(tickerDf.Volume)
     
 if option=='Mocrosoft':
