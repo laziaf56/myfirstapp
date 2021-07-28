@@ -9,7 +9,7 @@ Shown are the stock closing price and volume!
 
 option = st.sidebar.selectbox(
     'Select a mini project',
-     ['Google','Mocrosoft','AAPL'])
+     ['Google','Mocrosoft','Apple'])
 
 if option=='Google':
     tickerSymbol = 'GOOGL'
